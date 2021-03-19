@@ -1,12 +1,17 @@
- import React from 'react';
+import React from 'react';
+import Bg from '../../images/Bg.png'
  
- const Home = () => {
-     return (
-         <div style={{marginTop:"100px"}}>
-             <h1 >This is Home</h1>
-         </div>
+const Home = () => {
+    return (
+       
+            
+            <div  style={{marginTop:"100px"}} className="card row">
+        
+        <img className="card-img-bottom" src={Bg} alt="Card image cap" />
+      </div>
          
-     );
- };
- 
- export default Home;
+        
+    );
+};
+
+export default Home;

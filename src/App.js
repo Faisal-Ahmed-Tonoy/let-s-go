@@ -14,11 +14,15 @@ import Home from './components/Home/Home';
 
 function App() {
   return (
-    
+  
    
     <Router>
-       <h1>User Name: </h1>  
+        
+   
        <Header></Header>
+       <h1>Hello:</h1>
+       
+      
     
     <Switch>
     <Route path="/home">
