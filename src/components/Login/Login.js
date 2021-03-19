@@ -32,7 +32,7 @@ const Login = () => {
          }
     return (
         <div className= "login">
-            <button   onClick={handleSignIn}> Sign In</button>
+            <button  style={{textAlign:"center"}} type="button" class="btn  btn-block btn-primary"  onClick={handleSignIn}> Sign In With Gmail</button>
             {
                 user.isSignedIn && <p>Welcome ,{user.name}</p>
             }
