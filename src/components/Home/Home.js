@@ -2,9 +2,10 @@
  
  const Home = () => {
      return (
-         <div>
-             <h1>This is Home</h1>
+         <div style={{marginTop:"100px"}}>
+             <h1 >This is Home</h1>
          </div>
+         
      );
  };
  

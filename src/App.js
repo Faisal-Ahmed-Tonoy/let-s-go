@@ -21,6 +21,12 @@ function App() {
        <Header></Header>
     
     <Switch>
+    <Route path="/home">
+              <Home />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
   
         </Switch>
    
