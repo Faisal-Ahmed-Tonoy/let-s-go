@@ -3,3 +3,9 @@
                     width: 104%;
                 }
             }
+            
+            @media only screen and (max-width: 1024px) {
+                .nav-width {
+                    width: 104%;
+                }
+            }
