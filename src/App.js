@@ -11,6 +11,8 @@ import {
 } from "react-router-dom";
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import Destination from './components/Destination/Destination';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -30,6 +32,12 @@ function App() {
             </Route>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route  path="/login">
+             <Login></Login>
+            </Route>
+            <Route  path="/destination">
+             <Destination></Destination>
             </Route>
   
         </Switch>
