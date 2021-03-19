@@ -1,3 +1,5 @@
-.header {
-    background: #28A745;
-}
+            @media (max-width: 768px) {
+                .nav-width {
+                    width: 104%;
+                }
+            }
