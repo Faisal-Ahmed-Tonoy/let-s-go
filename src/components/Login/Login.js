@@ -41,6 +41,7 @@ function Login() {
 
       } 
       setUser(signInUser);
+      setLoggedInUser(signInUser);
     }) .catch(err =>{
       console.log(err);
       console.log(err.message);
@@ -204,11 +205,6 @@ function Login() {
        <button className="btn btn-block btn-primary" onClick={handleSignIn}>Sign In With Google</button>
      } 
     
-      { user.isSignedIn && <div>
-         <p>Welcome, {user.name}</p>
-        
-        </div>    
-        }
         <h1 style={{color:"#007BFF"}}> SignUp and Login </h1>
         <input type="checkbox" onChange={() =>setNewUser(!newUser)} name="newUser" id=""/>
         <label  style={{color:"#007BFF"}} htmlFor="newUser"> New User? Enter Your Name.</label>
