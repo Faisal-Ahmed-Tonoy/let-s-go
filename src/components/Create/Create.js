@@ -14,6 +14,8 @@ const Create = () => {
     const [user,setUser]=useState({
         isSignedIn:false,
         name:'',
+        email:'',
+        password:''
          })
          const provider =new firebase.auth.GoogleAuthProvider();
          const handleSignIn=() =>{
