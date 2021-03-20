@@ -55,7 +55,22 @@ if(isFieldValid){
         
            
     }
-    const  handleSubmit=() => {}
+    const  handleSubmit=() => {
+        if (user.email && user.password){
+            firebase.auth().createUserWithEmailAndPassword(user.email,user.password)
+  .then((userCredential) => {
+    // Signed in 
+    var user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ..
+  });
+
+        }
+    }
     return (
     <div >
          {

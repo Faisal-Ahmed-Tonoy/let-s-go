@@ -5,5 +5,5 @@ const firebaseConfig = {
     storageBucket: "let-s-go-cc861.appspot.com",
     messagingSenderId: "700836407468",
     appId: "1:700836407468:web:8f751189e5911866121709"
-};
+  };
 export default firebaseConfig;
