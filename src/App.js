@@ -12,17 +12,21 @@ import {
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Destination from './components/Destination/Destination';
- 
- 
 import Login from './components/Login/Login';
+import { createContext, useState } from 'react';
+
+export const  UserContext =  createContext();
+
+
 
 function App() {
+  const [loggedInUser,setLoggedInUser] =useState({});
   return (
-  
+  <UserContext.Provider value ={[loggedInUser,setLoggedInUser] }>
    
     <Router>
         
-       
+       <h2>Email :{loggedInUser.email}</h2>
        <Header></Header>
        
       
@@ -47,6 +51,7 @@ function App() {
         </Switch>
    
     </Router>
+    </UserContext.Provider>
  
   );
 }
