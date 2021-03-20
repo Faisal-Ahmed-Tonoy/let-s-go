@@ -10,6 +10,7 @@ if (!firebase.apps.length) {
 
 function Create() {
   const [newUser,setNewUser] = useState(false);
+  const [new]
   const [user,setUser]=useState({
     isSignedIn:false,
     newUser:false,
