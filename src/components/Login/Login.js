@@ -1,43 +1,30 @@
-import React, { useState } from 'react';
-
-
-
-import firebase from "firebase/app";
-import "firebase/auth";
-import firebaseConfig from './firebase.config';
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-  }
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
-    const [user,setUser]=useState({
-        isSignedIn:false,
-        name:'',
-         })
-         const provider =new firebase.auth.GoogleAuthProvider();
-         const handleSignIn=() =>{
-             firebase.auth().signInWithPopup(provider)
-             .then(res => {
-                 const {displayName}=res.user;
-                 const signedInUser ={
-                    isSignedIn:true,
-                    name:displayName
-                 }
-                 setUser(signedInUser)
-            })
-            .catch(err =>{
-                console.log(err.message);
-            })
-         }
+    const handleBlur =(event) => {}
+    const handleSubmit=() => {}
     return (
-        <div className= "login">
-            <button  style={{textAlign:"center"}} type="button" class="btn  btn-block btn-primary"  onClick={handleSignIn}> Sign In With Gmail</button>
-            {
-                user.isSignedIn && <p>Welcome ,{user.name}</p>
-            }
-            
+    <div >
+       
+        <form onSubmit={handleSubmit} className="container col-sm-12 col-md-12   align-items-center justify-content-center w-100" style={{minHight:"100vh",maxWidth:"400px"}}>
+        <h1>Log in</h1>
+        <div  className="form-group  " >
+          <label htmlFor="exampleInputEmail1">Email address</label>
+          <input onBlur={handleBlur} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required />
+  
         </div>
+        <div  className="form-group">
+          <label htmlFor="exampleInputPassword1">Password</label>
+          <input onBlur={handleBlur} type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"  required />
+        </div>
+        
+        <button style={{borderRadius:"20px"}} type="submit" className="btn-block btn-success">Login</button>
+         
+        <Link to="/create">  <p className="nav-link" style={{color:'black', textDecoration:'none'}}>Don't have an account?  click here to create </p></Link>
+      </form>
+    
+      </div>
     );
 };
 

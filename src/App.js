@@ -12,6 +12,8 @@ import {
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Destination from './components/Destination/Destination';
+ 
+import Create from './components/Create/Create';
 import Login from './components/Login/Login';
 
 function App() {
@@ -33,11 +35,14 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route  path="/login">
-             <Login></Login>
+            <Route  path="/create">
+           <Create></Create>
             </Route>
             <Route  path="/destination">
              <Destination></Destination>
+            </Route>
+            <Route  path="/login">
+             <Login></Login>
             </Route>
   
         </Switch>

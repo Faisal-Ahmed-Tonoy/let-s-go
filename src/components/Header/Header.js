@@ -13,6 +13,7 @@ const Header = () => {
         <Nav className="mr-auto">
         <Link to="/home">  <h5 className="nav-link" style={{color:'white', textDecoration:'none'}}>Home</h5></Link> 
         <Link to="/destination">  <h5 className="nav-link" style={{color:'white', textDecoration:'none'}}>Destination</h5></Link>
+        <Link to="/create">  <h5 className="nav-link" style={{color:'white', textDecoration:'none'}}>Create</h5></Link>
         <Link to="/login">  <h5 className="nav-link" style={{color:'white', textDecoration:'none'}}>Login</h5></Link>
           
           
