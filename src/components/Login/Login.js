@@ -203,7 +203,7 @@ function Login() {
        <button className="btn btn-block btn-primary" onClick={handleSignOut} >Sign Out</button>:
        <button className="btn btn-block btn-primary" onClick={handleSignIn}>Sign In With Google</button>
      } 
-     <button className="btn btn-block btn-primary" onClick={handleFbSignIn}>Facebook SignIn</button>
+    
       { user.isSignedIn && <div>
          <p>Welcome, {user.name}</p>
         
