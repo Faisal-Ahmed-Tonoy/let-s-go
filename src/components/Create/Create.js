@@ -10,7 +10,8 @@ if (!firebase.apps.length) {
 
 function Create() {
   const [newUser,setNewUser] = useState(false);
-  const [new]
+  const [isError,setIsError] =useState("");
+  const [confirmPassword,setConfirmPassword] =useState("");
   const [user,setUser]=useState({
     isSignedIn:false,
     newUser:false,
@@ -165,10 +166,7 @@ function Create() {
     e.preventDefault();
 
   }
-  if(user.password !== user.confirmPassword){
-   var passwordValidation =('Match two password');
-    
-    }
+   
     
   const updateUserName = name => {
     const user = firebase.auth().currentUser;
@@ -182,6 +180,17 @@ function Create() {
       // An error happened.
     });
   }
+  const checkValidation=(e) => {
+    setConfirmPassword (e.target.value)
+    if(user.password !== e.target.value){
+      setIsError('Confirm PassWord should be match with password');
+ }
+ else{
+   setIsError("");
+ }
+    
+  }
+  
   return (
     <div className="container colo-lg-12 col-sm-12 col-md-12 mt-4 mb-5  pt-3 align-items-center justify-content-center w-100 " style={{minHight:"100vh",maxWidth:"264px",border:'1px solid black',borderRadius:'10px',boxShadow: '1px 1px'}}>
       
@@ -198,6 +207,10 @@ function Create() {
         <h1 style={{color:"#007BFF"}}> SignUp and Login </h1>
         <input type="checkbox" onChange={() =>setNewUser(!newUser)} name="newUser" id=""/>
         <label  style={{color:"#007BFF"}} htmlFor="newUser"> New User? Enter Your Name.</label>
+        <p style={{color:"red" ,width:"100%",alignSelf:'center'}}>
+          {isError}
+
+        </p>
         
         
       <form  onSubmit={handleSubmit} action="" >
@@ -208,10 +221,10 @@ function Create() {
         <br/>
         <input className="mb-2" type="password" onBlur={handleBlur}  required placeholder="Your password" name="password" id=""/>
         <br/>
-        <input className="mb-2" type="password" onBlur={handleBlur}  required placeholder="Confirm Password" name="confirmPassword" id=""/>
+        <input className="mb-2" type="password" value={confirmPassword} onChange={(e) =>checkValidation(e)}   required placeholder="Confirm Password" name="confirmPassword" id=""/>
         <br/>
         <input className="btn btn-block btn-primary mt-1" type="submit"  value={newUser ? 'SignUp':'SignIn'}/>
-        {passwordValidation}
+      
        
       </form>
       <p style={{color:'red'}}>{user.error}</p>
