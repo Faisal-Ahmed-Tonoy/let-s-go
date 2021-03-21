@@ -27,7 +27,7 @@ function App() {
    
     <Router>
         
-       <h2>Email :{loggedInUser.email}</h2>
+       <h2>Email Show :{loggedInUser.email}</h2>
        
        <Header></Header>
        

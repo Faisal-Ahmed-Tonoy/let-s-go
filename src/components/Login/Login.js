@@ -137,7 +137,9 @@ function Login() {
     newUserInfo.success=true;
     setUser(newUserInfo);
     updateUserName(user.name);
-    console.log(res);
+    setLoggedInUser(newUserInfo);
+    history.replace(from);
+ 
     // Signed in 
    
     // ...
