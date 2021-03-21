@@ -3,6 +3,7 @@ import Bg from '../../images/Bg.png'
 import './Home.css';
 import vehicleData from '../../data/data.json';
 import ChooseVehicle from '../ChooseVehicle/ChooseVehicle';
+import Destination from '../Destination/Destination';
  
 const Home = () => {
     const [vehicles,setVehicles]= useState([]);

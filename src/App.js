@@ -26,8 +26,17 @@ function App() {
   <UserContext.Provider value ={[loggedInUser,setLoggedInUser] }>
    
     <Router>
+
+    <div class="card col-md-12 col-sm-12">
+  
+  <h2>Email  :{loggedInUser.email}</h2>
+  <h2>User Name :{loggedInUser.name}</h2>
+ 
+   
+</div>
         
-       <h2>Email Show :{loggedInUser.email}</h2>
+     
+      
        
        <Header></Header>
        
