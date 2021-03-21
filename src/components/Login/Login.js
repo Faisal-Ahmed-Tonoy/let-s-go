@@ -33,7 +33,7 @@ function Login() {
 
 
   const googleProvider = new firebase.auth.GoogleAuthProvider();
-  const fbProvider = new firebase.auth.FacebookAuthProvider();
+  const fbProvider = new firebase.auth.FacebookAuthProvider();  
   const handleSignIn =() =>{
     firebase.auth().signInWithPopup(googleProvider)
     .then(res =>{
@@ -162,6 +162,7 @@ function Login() {
     newUserInfo.success=true;
     setUser(newUserInfo);
     setLoggedInUser(newUserInfo);
+    history.replace(from);
     // ...
   })
   .catch((error) => {
