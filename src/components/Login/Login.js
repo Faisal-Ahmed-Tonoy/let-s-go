@@ -199,7 +199,7 @@ function Login() {
   const checkValidation=(e) => {
     setConfirmPassword (e.target.value)
     if(user.password !== e.target.value){
-      setIsError('Confirm PassWord should be match with password');
+      setIsError('Password Must Contain Seven Characters With a Number.Password Must Match With Confirm Password');
  }
  else{
    setIsError("");
