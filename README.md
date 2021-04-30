@@ -4,6 +4,7 @@
  Password validation is used to secure user privacy.  
  Google map is used in the application.
  Context API is used to show which user current information.
+ Technology used in this application React, React router, Firebase Authentication, Google map
  
  Live Site:https://let-s-go-cc861.web.app/
  ![](screenshot/Home.JPG)
